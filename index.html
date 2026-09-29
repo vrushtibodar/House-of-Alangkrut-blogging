@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>House of Alangkrut | Fashion & Lifestyle Blog</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                HOUSE OF <span>ALANGKRUT</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="login-btn" onclick="openLogin()">
+                Login
+            </button>
+
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-title">WELCOME TO</p>
+
+            <h1>
+                HOUSE OF<br>
+                <span>ALANGKRUT</span>
+            </h1>
+
+            <p>
+                Discover fashion, elegance, jewellery and lifestyle
+                stories curated for modern women.
+            </p>
+
+            <a href="#blogs" class="hero-btn">
+                Explore Stories
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Short Section -->
+    <section class="intro">
+
+        <p class="section-label">OUR JOURNEY</p>
+
+        <h2>
+            Where Fashion Meets <span>Elegance</span>
+        </h2>
+
+        <p>
+            House of Alangkrut is a fashion and lifestyle blogging space
+            where traditional beauty meets modern style. Explore our
+            latest stories, fashion ideas, jewellery inspiration and
+            lifestyle trends.
+        </p>
+
+    </section>
+
+
+    <!-- Blog Section -->
+    <section class="blogs" id="blogs">
+
+        <div class="section-heading">
+            <p class="section-label">LATEST STORIES</p>
+            <h2>Our Fashion Blogs</h2>
+        </div>
+
+
+        <!-- Search -->
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search blogs..."
+                onkeyup="searchBlogs()"
+            >
+
+        </div>
+
+
+        <!-- Category Buttons -->
+        <div class="categories">
+
+            <button onclick="filterBlogs('all')">
+                All
+            </button>
+
+            <button onclick="filterBlogs('fashion')">
+                Fashion
+            </button>
+
+            <button onclick="filterBlogs('jewellery')">
+                Jewellery
+            </button>
+
+            <button onclick="filterBlogs('lifestyle')">
+                Lifestyle
+            </button>
+
+        </div>
+
+
+        <!-- Blog Cards -->
+        <div class="blog-container" id="blogContainer">
+
+
+            <!-- Blog 1 -->
+            <article class="blog-card" data-category="fashion">
+
+                <img
+                    src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80"
+                    alt="Fashion"
+                >
+
+                <div class="blog-content">
+
+                    <span>FASHION</span>
+
+                    <h3>
+                        The Art of Modern Indian Fashion
+                    </h3>
+
+                    <p>
+                        Discover how traditional Indian fashion is
+                        becoming part of modern wardrobes.
+                    </p>
+
+                    <button onclick="saveBlog('Modern Indian Fashion')">
+                        Save Favourite
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- Blog 2 -->
+            <article class="blog-card" data-category="jewellery">
+
+                <img
+                    src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=80"
+                    alt="Jewellery"
+                >
+
+                <div class="blog-content">
+
+                    <span>JEWELLERY</span>
+
+                    <h3>
+                        Jewellery That Defines Your Style
+                    </h3>
+
+                    <p>
+                        From delicate pieces to statement jewellery,
+                        find the perfect accessory for every occasion.
+                    </p>
+
+                    <button onclick="saveBlog('Jewellery That Defines Your Style')">
+                        Save Favourite
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- Blog 3 -->
+            <article class="blog-card" data-category="lifestyle">
+
+                <img
+                    src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80"
+                    alt="Lifestyle Fashion"
+                >
+
+                <div class="blog-content">
+
+                    <span>LIFESTYLE</span>
+
+                    <h3>
+                        Building Your Personal Style
+                    </h3>
+
+                    <p>
+                        Simple ideas to create a wardrobe that reflects
+                        your personality and confidence.
+                    </p>
+
+                    <button onclick="saveBlog('Building Your Personal Style')">
+                        Save Favourite
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- Blog 4 -->
+            <article class="blog-card" data-category="fashion">
+
+                <img
+                    src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=900&q=80"
+                    alt="Indian Fashion"
+                >
+
+                <div class="blog-content">
+
+                    <span>FASHION</span>
+
+                    <h3>
+                        Timeless Ethnic Looks
+                    </h3>
+
+                    <p>
+                        Explore beautiful ethnic fashion ideas that
+                        never go out of style.
+                    </p>
+
+                    <button onclick="saveBlog('Timeless Ethnic Looks')">
+                        Save Favourite
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- Blog 5 -->
+            <article class="blog-card" data-category="jewellery">
+
+                <img
+                    src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80"
+                    alt="Gold Jewellery"
+                >
+
+                <div class="blog-content">
+
+                    <span>JEWELLERY</span>
+
+                    <h3>
+                        The Beauty of Minimal Jewellery
+                    </h3>
+
+                    <p>
+                        Learn how minimal jewellery can create an
+                        elegant everyday look.
+                    </p>
+
+                    <button onclick="saveBlog('Minimal Jewellery')">
+                        Save Favourite
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- Blog 6 -->
+            <article class="blog-card" data-category="lifestyle">
+
+                <img
+                    src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=80"
+                    alt="Lifestyle"
+                >
+
+                <div class="blog-content">
+
+                    <span>LIFESTYLE</span>
+
+                    <h3>
+                        Fashion For Every Occasion
+                    </h3>
+
+                    <p>
+                        From college days to celebrations, discover
+                        looks for every special moment.
+                    </p>
+
+                    <button onclick="saveBlog('Fashion For Every Occasion')">
+                        Save Favourite
+                    </button>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- Collections -->
+    <section class="collections" id="collections">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                EXPLORE
+            </p>
+
+            <h2>
+                Our Collections
+            </h2>
+
+        </div>
+
+
+        <div class="collection-container">
+
+            <div class="collection-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80"
+                    alt="Traditional Fashion"
+                >
+
+                <div>
+                    <h3>Traditional</h3>
+                    <p>Classic Indian elegance.</p>
+                </div>
+
+            </div>
+
+
+            <div class="collection-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=900&q=80"
+                    alt="Jewellery"
+                >
+
+                <div>
+                    <h3>Jewellery</h3>
+                    <p>Elegant pieces for every look.</p>
+                </div>
+
+            </div>
+
+
+            <div class="collection-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80"
+                    alt="Modern Fashion"
+                >
+
+                <div>
+                    <h3>Modern</h3>
+                    <p>Contemporary fashion inspiration.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section class="about" id="about">
+
+        <div class="about-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=1000&q=80"
+                alt="Fashion Store"
+            >
+
+        </div>
+
+
+        <div class="about-content">
+
+            <p class="section-label">
+                ABOUT US
+            </p>
+
+            <h2>
+                Fashion is a way of expressing who you are.
+            </h2>
+
+            <p>
+                House of Alangkrut brings together fashion,
+                jewellery and lifestyle stories in one beautiful
+                digital space.
+            </p>
+
+            <p>
+                Our goal is to inspire readers to discover their
+                personal style while appreciating the beauty of
+                Indian culture and modern fashion.
+            </p>
+
+            <button onclick="showMessage()">
+                Read More
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+
+        <h2>
+            Stay Connected
+        </h2>
+
+        <p>
+            Subscribe to receive our latest fashion stories.
+        </p>
+
+        <form onsubmit="subscribeUser(event)">
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <button type="submit">
+                Subscribe
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                GET IN TOUCH
+            </p>
+
+            <h2>
+                Contact Us
+            </h2>
+
+        </div>
+
+
+        <form class="contact-form" onsubmit="contactForm(event)">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="contactEmail"
+                placeholder="Your Email"
+                required
+            >
+
+            <textarea
+                id="message"
+                placeholder="Your Message"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-logo">
+            HOUSE OF ALANGKRUT
+        </div>
+
+        <p>
+            Fashion • Jewellery • Lifestyle
+        </p>
+
+        <p>
+            © 2026 House of Alangkrut. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- Login Popup -->
+    <div class="modal" id="loginModal">
+
+        <div class="login-box">
+
+            <button class="close-btn" onclick="closeLogin()">
+                ×
+            </button>
+
+            <h2>
+                Welcome Back
+            </h2>
+
+            <p>
+                Login to your House of Alangkrut account.
+            </p>
+
+            <form onsubmit="loginUser(event)">
+
+                <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="Email"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Password"
+                    required
+                >
+
+                <button type="submit">
+                    Login
+                </button>
+
+            </form>
+
+            <p class="signup-text">
+                New user?
+                <a href="#" onclick="showSignup()">
+                    Create Account
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Signup Popup -->
+    <div class="modal" id="signupModal">
+
+        <div class="login-box">
+
+            <button class="close-btn" onclick="closeSignup()">
+                ×
+            </button>
+
+            <h2>
+                Create Account
+            </h2>
+
+            <form onsubmit="signupUser(event)">
+
+                <input
+                    type="text"
+                    id="signupName"
+                    placeholder="Full Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="signupEmail"
+                    placeholder="Email"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="signupPassword"
+                    placeholder="Password"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Confirm Password"
+                    required
+                >
+
+                <button type="submit">
+                    Create Account
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
